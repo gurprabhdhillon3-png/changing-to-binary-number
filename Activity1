@@ -1,0 +1,12 @@
+number=int(input("Enter a number: "))
+position=int(input("Enter bit position: "))
+mask=1<<position
+set_result=number|mask
+print("Original number: ", number)
+print("Original binary: ", bin(number)[2:])
+print("After setting bit: ", set_result)
+print("Binary after setting: ", bin(set_result)[2:])
+clear_mask=~mask 
+clear_result=number & clear_mask
+print("After clearing bit: ", clear_result)
+print("Binary after clearing: ", bin(clear_result))
